@@ -1,18 +1,8 @@
 @extends('layouts.app')
-@section('titulo','Crear una Linea')
+@section('titulo','Crear una linea')
 @section('contenido')
 
-<div class="row mt-3 md-3">
-    @if($errors->any())
-        @foreach ($errors->all() as $error)
-            <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-3"></div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6 text-center">
-                <div class="alert alert-warning" role="alert">{{$error}}</div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-3"></div>
-        @endforeach
-    @endif
-</div>
+@include('includes/error')
 
 <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-3"></div>
@@ -26,7 +16,7 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="nombre">Nombre de la linea</label>
-                        <input type="text" class="form-control" value="{{ old('nombre') }}" name="nombre" id="nombre" placeholder="Ingresa el nombre">
+                        <input type="text" class="form-control" value="{{ old('nombre') }}" name="nombre" id="nombre" placeholder="Ingrese el nombre">
                     </div>
                     <div class="form-group">
                         <input type="file" class="form-control-file" id="imagen" name="imagen">

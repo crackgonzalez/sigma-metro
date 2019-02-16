@@ -22,3 +22,15 @@ Route::post('/linea','LineaController@store');
 Route::get('/linea/{linea}/edit','LineaController@edit');
 Route::put('/linea/{linea}/edit','LineaController@update');
 Route::delete('/linea/{id}','LineaController@destroy');
+Route::get('/linea/delete','LineaController@delete');
+Route::post('/linea/delete/{id}','LineaController@restore');
+
+// Contrato
+Route::get('/contrato','ContratoController@index');
+Route::get('/contrato/create','ContratoController@create');
+Route::post('/contrato','ContratoController@store');
+Route::get('/contrato/{contrato}/edit','ContratoController@edit');
+Route::put('/contrato/{contrato}/edit','ContratoController@update');
+Route::delete('/contrato/{id}','ContratoController@destroy');
+Route::get('/contrato/delete','ContratoController@delete');
+Route::post('/contrato/delete/{id}','ContratoController@restore');

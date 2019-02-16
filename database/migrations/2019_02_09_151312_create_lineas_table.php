@@ -17,6 +17,7 @@ class CreateLineasTable extends Migration
             $table->increments('id');
             $table->string('nombre')->unique();
             $table->string('imagen');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
